@@ -25,6 +25,7 @@ website-results//
 ---
 
 ## Project Structure
+````
 
 src/
 ├── routes/           # Express route modules
@@ -32,7 +33,7 @@ src/
 ├── utils/            # Helper utilities (filters, file IO)
 ├── middleware/       # Security, rate limiter, error handler
 └── server.mjs        # Entry point
-
+```
 ---
 
 ## Setup
