@@ -1,0 +1,28 @@
+# Node / build
+node_modules/
+pnpm-lock.yaml
+dist/
+.cache/
+
+# Environment & credentials
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+
+# Local results / data caches
+search-results/
+*.csv
+*.json
+
+# Logs & temp
+*.log
+logs/
+npm-debug.log*
+pnpm-debug.log*
+.DS_Store
+
+# VSCode / editor
+.vscode/
+.idea/
