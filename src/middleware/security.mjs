@@ -1,7 +1,4 @@
-
 // src/middleware/security.mjs
-// Central place to apply security-related middleware to the Express app
-// so your server.mjs stays small and declarative.
 
 import helmet from 'helmet';
 import cors from 'cors';
