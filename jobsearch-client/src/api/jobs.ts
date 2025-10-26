@@ -8,6 +8,8 @@ export type Filters = {
 	langs?: string; // "typescript,node"
 	includeStartups?: '0' | '1';
 	date?: string; // "DD-MM-YY" (optional)
+	newOnly?: '0' | '1';
+	sortBy?: 'firstSeen' | 'lastSeen';
 };
 
 export type Job = {
