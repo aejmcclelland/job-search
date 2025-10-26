@@ -1,0 +1,17 @@
+jobsearch-client/
+ ├── src/
+ │   ├── api/                # small wrapper around fetch calls
+ │   ├── components/         # reusable UI components
+ │   ├── pages/              # page-level components (like Next.js "pages")
+ │   ├── hooks/              # custom React hooks (e.g. useFetchJobs)
+ │   ├── types/              # shared TypeScript types
+ │   ├── App.tsx             # root layout and router
+ │   ├── main.tsx            # ReactDOM entry
+ │   └── index.css           # Tailwind entry
+ ├── public/                 # static assets
+ ├── .env.local              # frontend env vars (VITE_API_BASE, etc.)
+ ├── tailwind.config.js
+ ├── postcss.config.js
+ ├── tsconfig.json
+ ├── vite.config.ts
+ └── package.json

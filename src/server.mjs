@@ -10,10 +10,10 @@ const PORT = process.env.PORT || 4000;
 
 // Apply security middleware (Helmet, CORS, compression)
 applySecurity(app, {
-  corsOrigins: process.env.CORS_ORIGINS || 'http://localhost:3000',
-  allowCredentials: false,
-  trustProxy: process.env.TRUST_PROXY === '1',
-  enableCSP: false,
+	corsOrigins: process.env.CORS_ORIGINS || 'http://localhost:5173',
+	allowCredentials: false,
+	trustProxy: process.env.TRUST_PROXY === '1',
+	enableCSP: false,
 });
 
 // JSON body parser
