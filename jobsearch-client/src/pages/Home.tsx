@@ -24,29 +24,34 @@ export default function Home(): React.ReactElement {
 	return (
 		<div className='min-h-screen bg-base-100'>
 			<div className='container mx-auto p-4 md:p-6'>
-				<header className='mb-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4'>
-					<h1 className='text-2xl md:text-3xl font-bold'>My JobSearch</h1>
+				<header className='mb-4 md:mb-6 flex flex-col items-center text-center md:text-left md:flex-row md:items-center md:justify-between gap-4'>
+					<h1 className='text-2xl md:text-3xl font-bold text-center md:text-left'>
+						My Job Search
+					</h1>
 					<SourceToggle source={source} onChange={setSource} />
 				</header>
 
-				<div className='bg-base-200 flex items-center justify-center rounded-lg p-3 shadow-sm mb-4'>
+				<div className='bg-base-200 flex items-center justify-center rounded-lg p-3 shadow-sm mb-4 mx-auto w-full md:max-w-3xl'>
 					<FilterBar filters={filters} onChange={setFilters} />
 				</div>
 
 				{/* Top toolbar + pagination */}
-				<div className='flex items-center justify-between gap-3 flex-wrap mb-4'>
-					{!loading && !error && (
-						<Toolbar source={source} filters={filters} count={total} />
-					)}
-					{!loading && !error && total > 0 && (
-						<Pagination
-							total={total}
-							page={page}
-							pageSize={pageSize}
-							onPageChange={setPage}
-							onPageSizeChange={setPageSize}
-						/>
-					)}
+				{/* Sticky toolbar (CSV + pagination) */}
+				<div className='sticky top-0 z-30 bg-base-100/90 backdrop-blur supports-backdrop-filter:bg-base-100/60 border-b border-base-300'>
+					<div className='container mx-auto px-4 md:px-6 py-2 flex items-center justify-between gap-3 flex-wrap'>
+						{!loading && !error && (
+							<Toolbar source={source} filters={filters} count={total} />
+						)}
+						{!loading && !error && total > 0 && (
+							<Pagination
+								total={total}
+								page={page}
+								pageSize={pageSize}
+								onPageChange={setPage}
+								onPageSizeChange={setPageSize}
+							/>
+						)}
+					</div>
 				</div>
 
 				{loading && <span className='loading loading-spinner loading-md' />}

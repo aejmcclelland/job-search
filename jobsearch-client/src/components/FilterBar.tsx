@@ -11,7 +11,7 @@ export default function FilterBar({ filters, onChange }: FilterBarProps) {
 		onChange({ ...filters, [key]: value });
 
 	return (
-		<div className='flex flex-wrap gap-3 mb-4 items-center'>
+		<div className='flex flex-wrap items-center justify-center gap-3 mb-2 md:mb-4'>
 			{/* Region */}
 			<div className='join'>
 				<button
